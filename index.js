@@ -160,6 +160,7 @@ const deleteRoom = (room) => {
     rooms.delete(room.id);
 }
 
-server.listen(3005, () => {
-  console.log('listening on *:3005');
+const PORT = process.env.PORT || 3005;
+server.listen(PORT, () => {
+  console.log('listening on *:' + PORT);
 });
